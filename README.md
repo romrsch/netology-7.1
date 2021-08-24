@@ -75,15 +75,15 @@
 
 ***Ответ:***
 
-Установка версии 13.1
+Установим terraform последней версии
 
 ```
-export VER="0.13.1"
-wget https://releases.hashicorp.com/terraform/${VER}/terraform_${VER}_linux_amd64.zip
-unzip terraform_0.13.1_linux_amd64.zip
-sudo mv -v terraform  /usr/local/bin/
+sudo curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=$(dpkg --print-architecture)] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt install terraform
+
 ```
-![альт](https://i.ibb.co/FxrY9Td/Screenshot-28.jpg)
+![альт](https://i.ibb.co/6F03pBq/Screenshot-31.jpg)
 
 ---
 
@@ -105,6 +105,6 @@ sudo mv -v terraform  /usr/local/bin/terraform_12.7
 ```
 Проверим две версии terraform
 
-![альт](https://i.ibb.co/nBKvW1J/Screenshot-29.jpg)
+![альт](https://i.ibb.co/dLMw7cp/Screenshot-1.jpg)
 
 ---
